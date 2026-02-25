@@ -152,8 +152,8 @@ body {
 	right: 0;
 	bottom: 0;
 	background-image:
-		linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+		linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px), /* lineas horizontales en la sección hogar */
+		linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px); /* lineas verticales en la sección hogar */
 	background-size: 60px 60px;
 	background-position: 0 0, 0 0;
 	animation: gridMove 20s linear infinite;
@@ -212,18 +212,19 @@ body {
 	opacity: 0;
 }
 
+/* Boton de la sección Hogar */
 .cta-button {
 	display: inline-block;
 	padding: 1.2rem 3rem;
-	background: rgba(255, 255, 255, 0.95);
-	color: #1e293b;
+	background: rgba(255, 255, 255, 0.95); /* Fondo del boton */
+	color: #1e293b; /* Color de las letras del boton */
 	text-decoration: none;
 	font-weight: 700;
 	border-radius: 60px;
 	transition: all 0.4s ease;
-	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Sombreado del boton */
 	backdrop-filter: blur(10px);
-	border: 2px solid rgba(255, 255, 255, 0.3);
+	border: 2px solid rgba(255, 255, 255, 0.3); /* Borde del boton */
 }
 
 .cta-button:hover {
@@ -253,7 +254,7 @@ body {
 	left: 15%;
 	width: 120px;
 	height: 120px;
-	background: linear-gradient(45deg, #fff, transparent);
+	background: linear-gradient(45deg, #fff, transparent); /* Octagono superior esquina superior derecha */
 	clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 	animation: float 12s ease-in-out infinite;
 }
@@ -263,7 +264,7 @@ body {
 	right: 20%;
 	width: 100px;
 	height: 100px;
-	background: linear-gradient(135deg, #fff, transparent);
+	background: linear-gradient(135deg, #fff, transparent); /* estrella esquina superior derecha*/
 	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 	animation: float 10s ease-in-out infinite reverse;
 }
@@ -273,7 +274,7 @@ body {
 	left: 10%;
 	width: 80px;
 	height: 80px;
-	background: linear-gradient(90deg, #fff, transparent);
+	background: linear-gradient(90deg, #fff, transparent); /* hexagono esquina inferior izquierda*/
 	clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 	animation: float 8s ease-in-out infinite;
 }
@@ -283,7 +284,7 @@ body {
 	right: 15%;
 	width: 90px;
 	height: 90px;
-	background: linear-gradient(180deg, #fff, transparent);
+	background: linear-gradient(180deg, #fff, transparent); /* octagono inferior izquierda */
 	clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
 	animation: float 14s ease-in-out infinite;
 }
@@ -294,7 +295,7 @@ body {
 	transform: translateX(-50%);
 	width: 110px;
 	height: 110px;
-	background: linear-gradient(270deg, #fff, transparent);
+	background: linear-gradient(270deg, #fff, transparent); /* figura central */
 	clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
 	animation: float 9s ease-in-out infinite;
 }
@@ -311,7 +312,7 @@ body {
 	}
 }
 
-/* Section Styles */
+/* Sección de servicios */
 .section {
 	padding: 8rem 5%;
 	max-width: 1200px;
@@ -323,7 +324,7 @@ body {
 	font-size: clamp(2.5rem, 5vw, 3.5rem);
 	font-weight: 800;
 	margin-bottom: 4rem;
-	color: #1e293b;
+	color: #1e293b; /* Color de las letras Nuestro Arsenal EStrategico titulo */
 	opacity: 0;
 	transform: translateY(30px);
 	transition: all 0.8s ease;
@@ -335,9 +336,11 @@ body {
 	transform: translateY(0);
 }
 
-/* Services Section - Tab Layout */
+/* Fondo de la sección servicios */
 .services {
-	background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f8fafc 100%);
+	background: linear-gradient(135deg, #f8fafc 0%, /* Esquina superior izquierda */
+										#e2e8f0 50%, /* Diagonal central  */
+										#f8fafc 100%) /* Esquina inferior derecha */;
 	position: relative;
 }
 
@@ -348,6 +351,7 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
+	/* Fondo de rayas en la sección de servicios */
 	background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="diagonals" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M0,20 L20,0" stroke="rgba(71,85,105,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23diagonals)"/></svg>');
 }
 
@@ -365,11 +369,11 @@ body {
 }
 
 .services-content {
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(255, 255, 255, 0.8); /* Rectangulo de Arquitectura Estrategica */
 	border-radius: 25px;
 	padding: 2.5rem;
 	backdrop-filter: blur(15px);
-	border: 2px solid rgba(71, 85, 105, 0.1);
+	border: 2px solid rgba(71, 85, 105, 0.1); /* Contorno del rectangulo */
 	min-height: 400px;
 	transition: all 0.5s ease;
 }
@@ -391,18 +395,18 @@ body {
 	font-size: 1.8rem;
 	font-weight: 800;
 	margin-bottom: 1rem;
-	color: #1e293b;
+	color: #1e293b; /* Color de las letras Arquitectura estrategica titulo */
 }
 
 .service-details .service-subtitle {
 	font-size: 1rem;
-	color: #475569;
+	color: #475569; /* Color de las letras Comprehensive Business Framework Design */
 	margin-bottom: 1.5rem;
 	font-weight: 500;
 }
 
 .service-details p {
-	color: #64748b;
+	color: #64748b; /* Color del texto que esta debajo de Comprehensive Business Framework Design */
 	line-height: 1.7;
 	font-size: 1rem;
 	margin-bottom: 1.5rem;
@@ -419,7 +423,7 @@ body {
 	align-items: center;
 	gap: 0.8rem;
 	padding: 0.6rem 0;
-	border-bottom: 1px solid rgba(71, 85, 105, 0.08);
+	border-bottom: 1px solid rgba(71, 85, 105, 0.08); /* Color de las Lineas que estan debajo de los circulos con palomitas */
 }
 
 .service-features li:last-child {
@@ -429,12 +433,13 @@ body {
 .feature-check {
 	width: 20px;
 	height: 20px;
-	background: linear-gradient(135deg, #475569, #64748b);
+	background: linear-gradient(135deg, #475569, /* Fondo del circulo superior izquierda */
+										#64748b); /* Fondo del circulo inferior derecha */
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: white;
+	color: white; /* Color de la palomita */
 	font-size: 0.7rem;
 	flex-shrink: 0;
 }
@@ -1400,3 +1405,4 @@ body {
 	color: #64748b;
 
 }
+
