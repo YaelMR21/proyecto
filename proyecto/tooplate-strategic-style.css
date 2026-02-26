@@ -44,7 +44,7 @@ body {
 .logo { /*letras de StrategicPro*/
 	font-size: 1.8rem;
 	font-weight: 700;
-	background: linear-gradient(135deg, #475569, #64748b);
+	background: linear-gradient(135deg, #003B5C, #003B5C);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -80,7 +80,7 @@ body {
 
 .nav-links a {
 	text-decoration: none;
-	color: #1a202c; /* Letras de Hogar, servicio, Acerca de, etc. */
+	color: #003B5C; /* Letras de Hogar, servicio, Acerca de, etc. */
 	font-weight: 500;
 	transition: all 0.3s ease;
 	position: relative;
@@ -1409,6 +1409,7 @@ body {
 	color: #64748b;
 
 }
+
 
 
 
