@@ -64,23 +64,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 updateActiveMenu();
 
-// --- Text Rotation Effect for Hero Section ---
+// --- Texto rotativo de la sección Inicio ---
 document.addEventListener('DOMContentLoaded', () => {
    const headline = document.getElementById('hero-headline');
    const paragraph = document.getElementById('hero-paragraph');
 
    if (headline && paragraph) {
-      // Define the 3 sets of text you want to rotate
+      // Se coloca el nombre de las 3 carreras
       const textSets = [{
-            h1: "Strategic Excellence<br>Redefined",
+            h1: "ISTII",
             p: "We architect transformative business strategies that transcend conventional thinking and deliver extraordinary results."
          },
          {
-            h1: "Innovation That<br>Drives Growth",
+            h1: "IAA",
             p: "Our team harnesses cutting-edge technology and creative insights to build market leaders and unlock new opportunities."
          },
          {
-            h1: "Your Vision<br>Engineered",
+            h1: "IPGI",
             p: "We partner with you to turn ambitious goals into measurable, real-world results that create lasting competitive advantages."
          }
       ];
@@ -278,4 +278,5 @@ document.querySelectorAll('.testimonial-content').forEach(testimonial => {
       testimonial.style.transform = 'scale(1) translateY(0)';
       testimonial.style.boxShadow = '0 15px 35px rgba(71, 85, 105, 0.1)';
    });
+
 });
