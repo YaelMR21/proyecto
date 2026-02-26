@@ -267,16 +267,27 @@ window.addEventListener('scroll', () => {
    });
 });
 
-// Interactive testimonials
-document.querySelectorAll('.testimonial-content').forEach(testimonial => {
-   testimonial.addEventListener('mouseenter', () => {
-      testimonial.style.transform = 'scale(1.02) translateY(-5px)';
-      testimonial.style.boxShadow = '0 25px 50px rgba(71, 85, 105, 0.2)';
-   });
+// Interactive PREGUNTAS
 
-   testimonial.addEventListener('mouseleave', () => {
-      testimonial.style.transform = 'scale(1) translateY(0)';
-      testimonial.style.boxShadow = '0 15px 35px rgba(71, 85, 105, 0.1)';
-   });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+        const question = item.querySelector(".faq-question");
+
+        question.addEventListener("click", () => {
+
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove("active");
+                }
+            });
+
+            item.classList.toggle("active");
+        });
+    });
 
 });
+
