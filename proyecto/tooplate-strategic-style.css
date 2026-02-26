@@ -827,7 +827,7 @@ body {
 	}
 }
 
-/* Team Section - Hexagonal Layout */
+/* APARTADO PARA EL EQUIPO */
 .team {
 	background: #f8fafc;
 	position: relative;
@@ -935,108 +935,85 @@ body {
 	z-index: 2;
 }
 
-/* Testimonials Section - Overlapping Layout */
-.testimonials {
-	background: linear-gradient(135deg, #e2e8f0 0%, #f8fafc 100%);
-	position: relative;
-	overflow: hidden;
+/*  PREGUNTAS FRECUENTES */
+
+.faq-section {
+    background: linear-gradient(135deg, #e2e8f0 0%, #f8fafc 100%);
+    padding: 20px 0 80px 0;
 }
 
-.testimonials-container {
-	position: relative;
-	margin-top: 3rem;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-	gap: 2rem;
-	max-width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
+.faq-container {
+    max-width: 900px;
+    margin: 3rem auto 0 auto; /* espacio entre el titulo de la secc y las preguntas */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.testimonial {
-	position: relative;
-	opacity: 0;
-	transform: translateY(30px);
-	transition: all 0.6s ease;
+.faq-item {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 2px solid #e6f0ff;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
-.testimonial.animate {
-	opacity: 1;
-	transform: translateY(0);
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 51, 160, 0.1);
 }
 
-.testimonial-content {
-	background: rgba(255, 255, 255, 0.8);
-	padding: 2rem;
-	border-radius: 20px;
-	position: relative;
-	backdrop-filter: blur(10px);
-	border: 2px solid rgba(71, 85, 105, 0.1);
-	box-shadow: 0 8px 25px rgba(71, 85, 105, 0.1);
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+.faq-question {
+    padding: 20px 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0033a0; /* Azul rey  PENDIENTE CAMBIAR*/
+    background: #ffffff;
+    transition: all 0.3s ease;
 }
 
-.testimonial-content::before {
-	content: '"';
-	position: absolute;
-	top: -10px;
-	left: 20px;
-	font-size: 4rem;
-	color: rgba(71, 85, 105, 0.15);
-	font-family: Georgia, serif;
-	line-height: 1;
+.faq-question:hover {
+    background: #e6f2ff; /* Azul cielo suavE PENDIENTE */
 }
 
-.testimonial-text {
-	color: #1e293b;
-	font-style: italic;
-	margin-bottom: 1.5rem;
-	font-size: 1rem;
-	line-height: 1.6;
-	position: relative;
-	z-index: 2;
-	flex-grow: 1;
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 25px;
+    transition: all 0.4s ease;
+    background: #ffffff;
 }
 
-.testimonial-author {
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-	position: relative;
-	z-index: 2;
-	margin-top: auto;
+.faq-answer p {
+    margin: 20px 0;
+    color: #1e293b;
+    line-height: 1.6;
 }
 
-.author-avatar {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background: linear-gradient(135deg, #475569, #64748b);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: white;
-	font-weight: 700;
-	font-size: 1rem;
-	flex-shrink: 0;
+.faq-item.active .faq-answer {
+    max-height: 300px;
 }
 
-.author-info h4 {
-	font-weight: 700;
-	color: #1e293b;
-	margin-bottom: 0.2rem;
-	font-size: 0.95rem;
+.faq-item.active .faq-question {
+    background: #0033a0; /* Azul rey PENDIENTE */
+    color: #ffffff;
 }
 
-.author-info span {
-	color: #475569;
-	font-size: 0.85rem;
+.faq-icon {
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
 }
 
-/* Contact Section - Futuristic Form */
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* APARTADO PARA INFORMACIÓN DE CONTACTO (CORREO ELECTRÓNICO) */
 .contact {
 	background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
 	color: white;
@@ -1410,9 +1387,6 @@ body {
 	color: #64748b;
 
 }
-
-
-
 
 
 
