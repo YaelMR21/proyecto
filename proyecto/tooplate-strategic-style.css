@@ -369,7 +369,7 @@ body {
 }
 
 .services-content {
-	background: rgba(255, 255, 255, 0.8); /* Rectangulo de Arquitectura Estrategica */
+	background: rgba(241, 245, 249, 1); /* Rectangulo de Arquitectura Estrategica */
 	border-radius: 25px;
 	padding: 2.5rem;
 	backdrop-filter: blur(15px);
@@ -464,11 +464,11 @@ body {
 	gap: 1rem;
 }
 
-/* Aca me quede */
+/* Acá me quede XD */
 .service-tab:hover,
 .service-tab.active {
 	background: rgba(255, 255, 255, 0.9); /* Color de fondo de los subtemas, rayo, grafica, ola al poner el cursor */
-	border-color: rgba(71, 85, 105, 0.3); /* Color del borde de los subtemas, rayo, grafica, ola al poner el cursor */
+	border-color: rgba(9, 181, 226, 0.4); /* Color del borde de los subtemas, rayo, grafica, ola al poner el cursor */
 	transform: translateX(10px);
 	box-shadow: 0 10px 30px rgba(71, 85, 105, 0.15); /* Iluminación del fondo del rectangulo de arquitectura estrategica */
 }
@@ -485,8 +485,8 @@ body {
 	top: 0;
 	bottom: 0;
 	width: 0;
-	background: linear-gradient(135deg, #475569, /* Color superior de la linea del  rectangulo de arquitectura estrategica */ 
-										#64748b); /* Fondo inferior del cuadro del icono rayo, grafica, ola al poner el cursor */
+	background: linear-gradient(135deg, #003B5C, /* Color superior de la linea del  rectangulo de arquitectura estrategica */ 
+										#006CA8); /* Fondo inferior del cuadro del icono rayo, grafica, ola al poner el cursor */
 	transition: width 0.3s ease;
 }
 
@@ -499,8 +499,8 @@ body {
 	flex-shrink: 0;
 	width: 50px;
 	height: 50px;
-	background: linear-gradient(135deg, rgba(71, 85, 105, 0.1), /* Fondo superior del cuadro del icono rayo, grafica, ola al poner el cursor */
-										rgba(100, 116, 139, 0.1)); /* Fondo inferior del cuadro del icono rayo, grafica, ola al poner el cursor */
+	background: linear-gradient(135deg, rgba(241, 245, 249, 1), /* Fondo superior del cuadro del icono rayo, grafica, ola al poner el cursor */
+										rgba(203, 213, 225, 1)); /* Fondo inferior del cuadro del icono rayo, grafica, ola al poner el cursor */
 	border-radius: 12px;
 	display: flex;
 	align-items: center;
@@ -532,16 +532,17 @@ body {
 
 .service-tab:hover .tab-icon,
 .service-tab.active .tab-icon {
-	background: linear-gradient(135deg, #475569, /* Fondo superior de los cuadros de los iconos rayo, grafica, ola al poner el cursor */
-										#64748b); /* Fondo inferior de los cuadros de los iconos rayo, grafica, ola al poner el cursor */
+	background: linear-gradient(135deg, #7db3ff, /* Fondo superior de los cuadros de los iconos rayo, grafica, ola al poner el cursor */
+										#85b8ff); /* Fondo inferior de los cuadros de los iconos rayo, grafica, ola al poner el cursor */
 	color: white;
 	transform: scale(1.05);
 }
 
 /* Sección Acerca de */
 .about-section {
-	background: linear-gradient(135deg, #1e293b 0%, /* Fondo esquina superior de la sección Acerca de */
-										#475569 100%); /* Fondo esquina inferior de la sección Acerca de */
+	background: linear-gradient(135deg, #005B8F 0%, /* Esquina superior izquierda */ 
+										#003B5C 50%, /* Diagonal central */
+										#001F33 100%); /* Fondo esquina inferior de la sección Información General */
 	color: white;
 	position: relative;
 	overflow: hidden;
@@ -1387,6 +1388,3 @@ body {
 	color: #64748b;
 
 }
-
-
-
