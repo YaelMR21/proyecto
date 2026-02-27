@@ -1,0 +1,88 @@
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f9f4f4, #e8edf3); /* color degradado del fondo princip */
+}
+
+.contenedor{
+    width:90%;
+    max-width:1000px;
+    margin:50px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+h1{
+    text-align:center;
+    color:#04238a; /* color titulo */
+    margin-bottom:25px;
+}
+
+.alerta{
+    background:#adddf8;
+    color:#111111; /* collr de las letras deentro del cuadro */
+    padding:15px;
+    border-left:6px solid #7577ff; /* color del recuado de las letras*/
+    border-radius:8px;
+    margin-bottom:30px;
+    text-align:center;
+    font-weight:500;
+}
+
+.selector{
+    margin-bottom:30px;
+}
+
+select{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc; /* color del contorno de seleccionar elproceso  */
+    font-size:15px;
+    margin-top:10px;
+}
+
+.documentos{
+    margin-top:20px;
+}
+
+.documento-card{
+    background:#f9f9f9;
+    padding:18px;
+    margin-bottom:15px;
+    border-radius:10px;
+    border:1px solid #e0e0e0;
+    transition:0.3s;
+}
+
+.documento-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.documento-card h3{
+    margin:0 0 5px 0;
+    font-size:16px;
+    color:#333;
+}
+
+.documento-card small{
+    color:#777;
+    display:block;
+    margin-bottom:10px;
+}
+
+input[type="file"]{
+    width:100%;
+}
+
+.fade-in{
+    animation:fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+}
