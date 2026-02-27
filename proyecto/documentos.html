@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal de Carga de Documentos</title>
+<link rel="stylesheet" href="estilo_documentos.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+    <h1>Portal de Carga de Documentos de Titulación</h1>
+
+    <div class="alerta">
+        TODOS LOS DOCUMENTOS deben estar estrictamente en formato PDF.<br>
+        Una vez reunidos, deberán enviarse al correo institucional:<br>
+        <strong>titulacion.sjch@gmail.com</strong>
+    </div>
+
+    <div class="selector">
+        <label for="modalidad">Selecciona tu proceso de titulación:</label>
+        <select id="modalidad">
+            <option value="">-- Seleccionar --</option>
+            <option value="experiencia">Experiencia Profesional</option>
+            <option value="ceneval">Titulación mediante CENEVAL</option>
+            <option value="automatica">Titulación Automática</option>
+            <option value="maestria">Estudios de Maestría</option>
+            <option value="tesis">Tesis / Tesina</option>
+        </select>
+    </div>
+
+    <div id="documentosContainer" class="documentos"></div>
+
+</div>
+
+<script src="animacion_documento.js"></script>
+</body>
+</html>
