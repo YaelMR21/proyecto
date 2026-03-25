@@ -73,15 +73,39 @@ document.addEventListener('DOMContentLoaded', () => {
       // Se coloca el nombre de las 3 carreras
       const textSets = [{
             h1: "ISTII",
-            p: "We architect transformative business strategies that transcend conventional thinking and deliver extraordinary results."
+            p: "Ni el mejor firewall detiene nuestra pasión por innovar."
          },
          {
             h1: "IAA",
-            p: "Our team harnesses cutting-edge technology and creative insights to build market leaders and unlock new opportunities."
+            p: "Nuestra meta no tiene límites, nuestro motor es la excelencia."
          },
          {
             h1: "IPGI",
-            p: "We partner with you to turn ambitious goals into measurable, real-world results that create lasting competitive advantages."
+            p: "Minimizando errores, maximizando el éxito."
+         },
+         {
+            h1: "ISTII",
+            p: "Las noches de estudio han merecido la pena, ya casi eres un profesional."
+         },
+         {
+            h1: "IAA",
+            p: "Cada desafío es una oportunidad disfrazada. Tu esfuerzo de hoy es tu éxito de mañana."
+         },
+         {
+            h1: "IPGI",
+            p: "Hoy cierras un capítulo, pero las páginas que siguen están llenas de oportunidades."
+         },
+         {
+            h1: "ISTII",
+            p: "En nuestro código, el error no es una opción, es una oportunidad de optimización."
+         },
+         {
+            h1: "IAA",
+            p: "Nuestra meta no tiene límites, nuestro motor es la excelencia."
+         },
+         {
+            h1: "IPGI",
+            p: "Donde otros ven caos, nosotros diseñamos sistemas de flujo perfecto."
          }
       ];
 
@@ -172,7 +196,7 @@ document.querySelectorAll('.fade-in, .service-tab, .team-member, .testimonial, .
    observer.observe(el);
 });
 
-// Enhanced Counter Animation
+// Animación de los numeros de información general 
 function animateCounter(element) {
    if (element.classList.contains('animated')) return;
    element.classList.add('animated');
@@ -184,10 +208,10 @@ function animateCounter(element) {
    const timer = setInterval(() => {
       current += increment;
       const value = Math.floor(current);
-      element.textContent = target > 100 ? value : value + '%';
+      element.textContent = value;
 
       if (current >= target) {
-         element.textContent = target > 100 ? target : target + '%';
+         element.textContent = value;
          clearInterval(timer);
       }
    }, 25);
@@ -210,21 +234,21 @@ window.addEventListener('scroll', () => {
 // Enhanced Form submission
 const contactForm = document.querySelector('.contact-form');
 contactForm.addEventListener('submit', (e) => {
-   e.preventDefault();
+   //e.preventDefault();
 
    const submitBtn = contactForm.querySelector('.submit-btn');
    const originalText = submitBtn.textContent;
 
-   submitBtn.textContent = 'Initiating Connection...';
+   submitBtn.textContent = 'Enviando';
    submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
    submitBtn.classList.add('loading');
 
    setTimeout(() => {
-      submitBtn.textContent = 'Partnership Initiated!';
+      submitBtn.textContent = 'Enviado';
       submitBtn.classList.remove('loading');
       setTimeout(() => {
          submitBtn.textContent = originalText;
-         submitBtn.style.background = 'linear-gradient(135deg, #64748b, #475569)';
+         submitBtn.style.background = 'linear-gradient(135deg, #005B8F, #005B8F)';
          contactForm.reset();
       }, 3000);
    }, 2000);
