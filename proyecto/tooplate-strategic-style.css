@@ -557,13 +557,15 @@ body {
 	right: 0;
 	bottom: 0;
 	z-index: 1;
-	/* Ensure grid is behind content */
+
+	/* rayas de fondo de la sección información */
 	background-image:
 		repeating-linear-gradient(45deg,
 			rgba(255, 255, 255, 0.06),
 			rgba(255, 255, 255, 0.06) 1px,
 			transparent 1px,
 			transparent 100px),
+			
 		repeating-linear-gradient(-45deg,
 			rgba(255, 255, 255, 0.06),
 			rgba(255, 255, 255, 0.06) 1px,
@@ -591,7 +593,7 @@ body {
 	top: 0;
 	bottom: 0;
 	width: 4px;
-	background: linear-gradient(to bottom, #64748b, transparent);
+	background: linear-gradient(to bottom, #64748b, transparent); /* linea horizontal del lado izquierdo */
 	border-radius: 2px;
 }
 
@@ -599,13 +601,13 @@ body {
 	font-size: clamp(2.2rem, 4vw, 3.2rem);
 	font-weight: 800;
 	margin-bottom: 2.5rem;
-	color: white;
+	color: white; /* color de las letras de personal administrativo*/
 	letter-spacing: -1px;
 	line-height: 1.2;
 }
 
 .about-content .highlight {
-	color: #94a3b8;
+	color: #94a3b8; /* color de las letras de información general */
 	font-weight: 600;
 	font-size: 1.3rem;
 	margin-bottom: 2rem;
@@ -613,7 +615,7 @@ body {
 }
 
 .about-content p {
-	color: rgba(255, 255, 255, 0.85);
+	color: rgba(255, 255, 255, 0.85); /* Color de las letras de principal responsable */
 	margin-bottom: 2rem;
 	font-size: 1.15rem;
 	line-height: 1.8;
@@ -665,22 +667,22 @@ body {
 	align-items: center;
 	gap: 1rem;
 	padding: 1rem;
-	background: rgba(255, 255, 255, 0.05);
+	background: rgba(255, 255, 255, 0.08); /* Fonde los los cuatro rectangunlos */
 	border-radius: 15px;
 	backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(9, 181, 226, 0.6); /* Contorno de los cuatro rectangulos */
 	transition: all 0.3s ease;
 }
 
 .feature-item:hover {
-	background: rgba(255, 255, 255, 0.08);
+	background: rgba(0, 59, 92, 0.85); /* Fondo de los cuatro rectangulos al poner el cursor en el rectangulo */
 	transform: translateX(5px);
 }
 
 .feature-icon {
 	width: 40px;
 	height: 40px;
-	background: linear-gradient(135deg, #64748b, #94a3b8);
+	background: linear-gradient(135deg, #005B8F, #09B5E2); /* Fondo de los cuatro circulos de los rectangulos */
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -690,7 +692,7 @@ body {
 }
 
 .feature-text {
-	color: rgba(255, 255, 255, 0.9);
+	color: rgba(255, 255, 255, 0.9); /* Letras de los cuatro rectangulos */
 	font-weight: 500;
 	font-size: 0.95rem;
 }
@@ -709,26 +711,27 @@ body {
 .stat {
 	text-align: center;
 	padding: 1.5rem;
-	background: rgba(255, 255, 255, 0.1);
+	background: rgba(255, 255, 255, 0.08); /* Fondo de los rectangulos de los números */
 	border-radius: 20px;
 	backdrop-filter: blur(10px);
 	transition: all 0.3s ease;
+	border: 1px solid rgba(9, 181, 226, 0.6); /* Contorno de los cuatro rectangulos */
 }
 
 .stat:hover {
 	transform: scale(1.05);
-	background: rgba(255, 255, 255, 0.15);
+	background: rgba(255, 255, 255, 0.15); /* Fondo de los rectangulos de los números al colocar el cursor sobre el rectangulo */
 }
 
 .stat-number {
 	font-size: 3rem;
 	font-weight: 900;
-	color: #94a3b8;
+	color: #94a3b8; /* Color de los números del rectangulo */
 	display: block;
 }
 
 .stat-label {
-	color: rgba(255, 255, 255, 0.8);
+	color: rgba(255, 255, 255, 0.8); /* Color de las letras de los rectangulos de los números */
 	font-size: 0.9rem;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -747,11 +750,11 @@ body {
 	height: 350px;
 	max-width: 450px;
 	margin: 0 auto;
-	background: rgba(255, 255, 255, 0.05);
+	/*background: rgba(255, 255, 255, 0.05); /* Fondo del cuadro de la foto */
 	border-radius: 30px;
 	backdrop-filter: blur(15px);
 	overflow: hidden;
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.1); /* Margen del cuadro de la foto */
 }
 
 .about-image img {
@@ -769,7 +772,7 @@ body {
 	left: -50%;
 	width: 200%;
 	height: 200%;
-	background: conic-gradient(from 0deg, transparent, rgba(100, 116, 139, 0.3), transparent);
+	/*background: conic-gradient(from 0deg, transparent, rgba(5, 109, 255, 0.3), transparent); /* Fondo de la parte inferior del cuadro de la foto */
 	animation: rotate 25s linear infinite;
 	z-index: 1;
 }
@@ -785,7 +788,7 @@ body {
 
 .visual-shape {
 	position: absolute;
-	background: rgba(0, 0, 0, 0.9);
+	/*background: rgba(0, 0, 0, 0.9); /* Color de los circulos del cuadro de la foto */
 	border-radius: 50%;
 	animation: floatSlow 15s ease-in-out infinite;
 }
@@ -829,7 +832,7 @@ body {
 }
 
 /* APARTADO PARA EL EQUIPO */
-.team {
+/*.team {
 	background: #f8fafc;
 	position: relative;
 }
@@ -934,7 +937,7 @@ body {
 	line-height: 1.6;
 	position: relative;
 	z-index: 2;
-}
+} */
 
 /*  PREGUNTAS FRECUENTES */
 
@@ -1000,7 +1003,7 @@ body {
 }
 
 .faq-item.active .faq-question {
-    background: #0033a0; /* Azul rey PENDIENTE */
+    background: #03348f; /* Azul rey PENDIENTE */
     color: #ffffff;
 }
 
@@ -1016,7 +1019,7 @@ body {
 
 /* APARTADO PARA INFORMACIÓN DE CONTACTO (CORREO ELECTRÓNICO) */
 .contact {
-	background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+	background: linear-gradient(135deg, #003B5C, #003B5C);
 	color: white;
 	position: relative;
 	overflow: hidden;
@@ -1104,7 +1107,7 @@ body {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-	color: rgba(255, 255, 255, 0.7);
+	color: rgb(255, 255, 255);
 }
 
 .contact-form input:focus,
@@ -1124,7 +1127,7 @@ body {
 }
 
 .submit-btn {
-	background: linear-gradient(135deg, #64748b, #475569);
+	background: linear-gradient(135deg, #005B8F, #005B8F);
 	color: white;
 	padding: 1.5rem 3rem;
 	border: none;
