@@ -1,0 +1,235 @@
+        body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                
+                /* 1. La imagen con un filtro oscuro encima */
+                background: linear-gradient(rgba(26, 48, 89, 0.8), rgba(26, 48, 89, 0.8)), 
+                            url('fondo_buap.jpg'); 
+                
+                /* 2. Ajustes para que la imagen no se repita y cubra todo */
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed; /* Mantiene la imagen quieta al hacer scroll */
+                
+                position: relative;
+                overflow: hidden;
+        }
+
+        /* --- FORMAS GEOMÉTRICAS DE FONDO --- */
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(180deg, #0f5199 0%, #0d6f8a 100%); /* Degradado morado */
+        }
+
+        .shape-top {
+            width: 200px;
+            height: 200px;
+            top: 20px;
+            left: 300px;
+        }
+
+        .shape-bottom {
+            width: 150px;
+            height: 150px;
+            bottom: -50px;
+            right: 150px;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL (EL BLOQUE ENTERO) --- */
+        .container {
+            width: 80%; /* Ancho responsivo */
+            max-width: 1000px; /* Ancho máximo para pantallas grandes */
+            display: flex; /* Flexbox para crear las dos columnas */
+            gap: 20px;
+            position: relative;
+            z-index: 10; /* Asegura que esté sobre las formas de fondo */
+        }
+
+        /* --- COLUMNA IZQUIERDA (EL TEXTO) --- */
+        .text-section {
+            flex: 1; /* Ocupa el 50% del espacio */
+            color: #E6EFFF; /* Color de texto azul pálido */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-section h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .text-section .highlight-text {
+            display: block; /* Para forzar la segunda línea */
+        }
+
+        .text-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 15px;
+            color: #C1D4F1; /* Color de texto más tenue */
+        }
+
+        /* --- COLUMNA DERECHA (EL FORMULARIO) --- */
+        .form-section {
+            flex: 1; /* Ocupa el 50% del espacio */
+            display: flex;
+            justify-content: flex-end; /* Alinea el formulario a la derecha */
+        }
+
+        .form-card {
+            background-color: #333333; /* Fondo gris oscuro del formulario */
+            padding: 40px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px; /* Ancho máximo del formulario */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative; /* Para elementos absolutos dentro, si los hay */
+        }
+
+        /* --- ESTILOS DE LOS CAMPOS DE ENTRADA (INPUTS) --- */
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            background-color: transparent; /* Fondo transparente */
+            border: 1px solid #555555; /* Borde gris sutil */
+            border-radius: 4px;
+            color: #FFFFFF; /* Texto blanco al escribir */
+            box-sizing: border-box; /* Asegura que padding no sume al ancho */
+            font-size: 0.9rem;
+        }
+
+        /* Placeholder con color claro */
+        input::placeholder {
+            color: #CCCCCC;
+        }
+
+        /* Agrupamiento para Nombre y Apellido */
+        .name-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* --- CHECKBOX Y TEXTO --- */
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            color: #CCCCCC;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            appearance: none; /* Elimina estilo por defecto */
+            width: 18px;
+            height: 18px;
+            border: 2px solid #4F86EA; /* Borde azul */
+            border-radius: 4px;
+            margin-right: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        /* Estilo para el checkbox marcado (con el tick) */
+        .checkbox-group input[type="checkbox"]:checked {
+            background-color: #4F86EA;
+        }
+
+        .checkbox-group input[type="checkbox"]:checked::after {
+            content: "\f00c"; /* Código de Font Awesome para el tick */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: white;
+            position: absolute;
+            top: -1px;
+            left: 2px;
+            font-size: 12px;
+        }
+
+        /* --- BOTÓN DE REGISTRO --- */
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #4F86EA; /* Color azul del botón */
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-btn:hover {
+            background-color: #3B6BB8; /* Color azul más oscuro al pasar el ratón */
+        }
+
+        /* --- SECCIÓN SOCIAL --- */
+        .social-signup {
+            text-align: center;
+            margin-top: 25px;
+            color: #CCCCCC;
+            font-size: 0.9rem;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Estilos de los iconos individuales (con efecto hover) */
+        .social-icons a {
+            color: #CCCCCC;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-icons a:hover {
+            color: #FFFFFF; /* Más claro al pasar el ratón */
+            transform: translateY(-2px); /* Pequeña animación */
+        }
+
+        /* Estilo específico para los iconos en la imagen (pueden ser textos o Font Awesome) */
+        .raw-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            color: #CCCCCC;
+            font-family: Arial, sans-serif;
+            margin-top: 10px;
+        }
+
+        /* Media Query para responsividad en móviles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Cambia a columna en móviles */
+                width: 90%;
+            }
+            .form-section {
+                justify-content: center; /* Centra el formulario */
+            }
+            .text-section h1 {
+                font-size: 2.2rem;
+            }
+        }

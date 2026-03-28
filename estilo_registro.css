@@ -1,0 +1,75 @@
+ body {
+            margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                
+                /* 1. La imagen con un filtro oscuro encima */
+                background: linear-gradient(rgba(26, 48, 89, 0.8), rgba(26, 48, 89, 0.8)), 
+                            url('fondo_buap.jpg'); 
+                
+                /* 2. Ajustes para que la imagen no se repita y cubra todo */
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed; /* Mantiene la imagen quieta al hacer scroll */
+                
+                position: relative;
+                overflow: hidden;
+        }
+
+        /* Estilo de la tarjeta (Gris muy oscuro) */
+        .dark-form-card {
+            background-color: #333333 !important;
+            border-radius: 15px;
+            color: white;
+            z-index: 10;
+        }
+
+        /* Efecto de encimar la tarjeta sobre la imagen */
+        .cascading-right {
+            margin-right: -50px;
+        }
+
+        /* Estilo de los inputs (Bordes finos y oscuros) */
+        .form-control {
+            background-color: transparent !important;
+            border: 1px solid #444 !important;
+            color: white !important;
+            padding: 12px;
+        }
+
+        .form-control::placeholder {
+            color: #888 !important;
+        }
+
+        /* Botón azul exacto */
+        .btn-primary-custom {
+            background-color: #4373d1 !important;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding: 12px;
+            border-radius: 5px;
+        }
+
+        /* Imagen de la derecha */
+        .img-side {
+            object-fit: cover;
+            height: 600px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Responsive: quitar el margen en móviles */
+        @media (max-width: 991.98px) {
+            .cascading-right {
+                margin-right: 0;
+                margin-bottom: -50px;
+            }
+            .img-side {
+                height: 300px;
+            }
+        }

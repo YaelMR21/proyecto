@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Titulación BUAP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilo_Proceso_tesis_tesina.css"> </head>
+<body>
+
+    <header>
+        <div style="display: flex; align-items: center;">
+            <div class="logo-buap">BUAP</div>
+            <div class="portal-title">PORTAL DE TITULACIÓN</div>
+        </div>
+        <div class="student-info">
+            <strong>Juan Pérez C.</strong><br>
+            <span>jpc.1812345@alumno.buap.mx</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>MI PROCESO DE TITULACIÓN</h2>
+
+        <div class="timeline">
+            <div class="step-card completed" onclick="cambiarEtapa(1)">
+                <i class="fas fa-check-circle step-icon"></i>
+                <div class="step-title">1. Registro</div>
+            </div>
+            
+            <i class="fas fa-chevron-right arrow"></i>
+            
+            <div class="step-card active" onclick="cambiarEtapa(2)" id="paso2">
+                <i class="fas fa-file-signature step-icon"></i>
+                <div class="step-title">2. Protocolo</div>
+            </div>
+            
+            <i class="fas fa-chevron-right arrow"></i>
+            
+            <div class="step-card locked" onclick="cambiarEtapa(3)">
+                <i class="fas fa-lock step-icon"></i>
+                <div class="step-title">3. Examen</div>
+            </div>
+            
+            <i class="fas fa-chevron-right arrow"></i>
+            
+            <div class="step-card locked" onclick="cambiarEtapa(4)">
+                <i class="fas fa-lock step-icon"></i>
+                <div class="step-title">4. Título</div>
+            </div>
+        </div>
+
+        <div class="step-details" id="contenedor-detalles">
+            <h3 id="etapa-titulo">Etapa Actual: Aprobación de Proyecto</h3>
+            <p id="etapa-estado" style="color: #666; font-size: 0.9rem;">Estado: <span style="color: var(--rejected); font-weight: bold;">Acción Requerida</span></p>
+
+            <div class="document-list" id="lista-documentos">
+                </div>
+
+            <div class="download-box" id="caja-descarga">
+                </div>
+
+            <button class="btn btn-primary" id="btn-finalizar" disabled>SOLICITAR REVISIÓN DE ETAPA</button>
+        </div>
+    </div>
+
+    <script>
+        function cambiarEtapa(paso) {
+            const titulo = document.getElementById('etapa-titulo');
+            const lista = document.getElementById('lista-documentos');
+            const descargas = document.getElementById('caja-descarga');
+
+            if (paso === 1) {
+    titulo.innerText = "Etapa 1: Registro de Datos";
+    
+    // Solo tienes que poner un <div> después de otro dentro de las comillas ``
+    lista.innerHTML = `
+        <div class="doc-item approved">
+            <div class="doc-header">
+                <div class="doc-name"><i class="fas fa-check-circle"></i> Certificado de estudios</div>
+                <span style="color: green; font-weight: bold;">APROBADO</span>
+            </div>
+        </div>
+
+        <div class="doc-item approved">
+            <div class="doc-header">
+                <div class="doc-name"><i class="fas fa-check-circle"></i> Kárdex legalizado</div>
+                <span style="color: green; font-weight: bold;">APROBADO</span>
+            </div>
+        </div>
+
+        <div class="doc-item">
+            <div class="doc-header">
+                <div class="doc-name"><i class="far fa-circle"></i> Constancia de práctica profesional</div>
+                <button class="btn btn-upload">SUBIR ARCHIVO</button>
+            </div>
+        </div>
+
+        <div class="doc-item">
+            <div class="doc-header">
+                <div class="doc-name"><i class="far fa-circle"></i> Certificado de servicio social.</div>
+                <button class="btn btn-upload">SUBIR ARCHIVO</button>
+            </div>
+        </div>
+
+        <div class="doc-item">
+            <div class="doc-header">
+                <div class="doc-name"><i class="far fa-circle"></i> Liberación de laboratorios y almacén</div>
+                <button class="btn btn-upload">SUBIR ARCHIVO</button>
+            </div>
+        </div>
+
+        <div class="doc-item">
+            <div class="doc-header">
+                <div class="doc-name"><i class="far fa-circle"></i> Formato de liberación de Tesis/Tesina</div>
+                <button class="btn btn-upload">SUBIR ARCHIVO</button>
+            </div>
+        </div>
+
+        <div class="doc-item">
+            <div class="doc-header">
+                <div class="doc-name"><i class="far fa-circle"></i> Carta de solicitud de titulación por Tesis/Tesina</div>
+                <button class="btn btn-upload">SUBIR ARCHIVO</button>
+            </div>
+        </div>
+
+        <div class="doc-item">
+            <div class="doc-header">
+                <div class="doc-name"><i class="far fa-circle"></i> Fotografía digital tamaño infantil en formato JPEG con fondo blanco y aspecto formal.</div>
+                <button class="btn btn-upload">SUBIR ARCHIVO</button>
+            </div>
+        </div>
+
+        <div class="doc-item">
+            <div class="doc-header">
+                <div class="doc-name"><i class="far fa-circle"></i> Póliza de pago impresa y voucher original</div>
+                <button class="btn btn-upload">SUBIR ARCHIVO</button>
+            </div>
+        </div>
+
+        
+    `;                    
+                descargas.innerHTML = '<p>No hay formatos pendientes.</p>';
+            } 
+            
+            else if (paso === 2) {
+                titulo.innerText = "Etapa 2: Aprobación de Protocolo";
+                lista.innerHTML = `
+                    <div class="doc-item rejected">
+                        <div class="doc-header">
+                            <div class="doc-name"><i class="fas fa-times-circle"></i> Protocolo de Investigación</div>
+                            <button class="btn btn-upload">REEMPLAZAR</button>
+                        </div>
+                        <div class="admin-feedback">Comentario: Falta firma del asesor.</div>
+                    </div>`;
+                descargas.innerHTML = '<button class="btn"><i class="fas fa-file-pdf"></i> Descargar Formato Protocolo</button>';
+            }
+
+            else if (paso === 3) {
+                titulo.innerText = "Etapa 3: Examen Profesional";
+                lista.innerHTML = `<p><i class="fas fa-lock"></i> Esta etapa estará disponible cuando apruebes el protocolo.</p>`;
+                descargas.innerHTML = '';
+            }
+            
+            // Quitar clase active de todos y ponerla al seleccionado
+            document.querySelectorAll('.step-card').forEach(card => card.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+        }
+
+        // Cargar etapa 2 por defecto al abrir
+        window.onload = () => cambiarEtapa(1);
+    </script>
+</body>
+</html>

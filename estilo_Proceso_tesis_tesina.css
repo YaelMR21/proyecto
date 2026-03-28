@@ -1,0 +1,150 @@
+      :root {
+            --buap-dark: #003b5c;
+            --buap-light: #00a1df;
+            --success: #28a745;
+            --pending: #6c757d;
+            --rejected: #dc3545;
+            --bg-color: #f4f7f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: #333;
+        }
+
+        /* --- HEADER --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 10px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo-buap {
+            background-color: var(--buap-dark);
+            color: white;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 4px;
+        }
+        .portal-title {
+            margin-left: 15px;
+            font-weight: bold;
+            color: var(--buap-dark);
+        }
+        .student-info {
+            text-align: right;
+            font-size: 0.85rem;
+            line-height: 1.2;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        h2 {
+            text-align: center;
+            color: var(--buap-dark);
+            margin-bottom: 40px;
+        }
+
+        /* --- TIMELINE --- */
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            gap: 10px;
+        }
+        .step-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            flex: 1;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-bottom: 4px solid transparent;
+        }
+        .step-card.completed { border-bottom-color: var(--success); }
+        .step-card.active { 
+            border-bottom-color: var(--buap-light); 
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        .step-card.locked { 
+            background: #e0e0e0; 
+            opacity: 0.6; 
+            cursor: not-allowed;
+        }
+        .step-icon { font-size: 1.8rem; margin-bottom: 10px; color: var(--buap-dark); }
+        .step-card.active .step-icon { color: var(--buap-light); }
+        .step-title { font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
+        .arrow { color: #ccc; font-size: 1.2rem; }
+
+        /* --- DETALLES Y DOCUMENTOS --- */
+        .step-details {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .doc-item {
+            border: 1px solid #eee;
+            border-left: 5px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .doc-item.approved { border-left-color: var(--success); }
+        .doc-item.rejected { border-left-color: var(--rejected); }
+        
+        .doc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .doc-name { font-weight: 600; display: flex; align-items: center; gap: 10px; }
+        .admin-feedback {
+            background: #fff5f5;
+            color: #b71c1c;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            border: 1px solid #ffcdd2;
+        }
+
+        /* --- BOTONES --- */
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-primary { background: var(--buap-light); color: white; width: 100%; margin-top: 20px; }
+        .btn-primary:disabled { background: #ccc; cursor: not-allowed; }
+        .btn-upload { background: var(--buap-dark); color: white; font-size: 0.8rem; }
+        .download-box {
+            background: #f0faff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 25px;
+            border: 1px dashed var(--buap-light);
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .timeline { flex-direction: column; align-items: stretch; }
+            .arrow { display: none; }
+            header { flex-direction: column; text-align: center; }
+            .student-info { text-align: center; margin-top: 10px; }
+            .doc-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+        }
